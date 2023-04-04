@@ -14,49 +14,8 @@
 
 <body>
 
+<?php include 'menus/menu1.php' ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ADDDFA;">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="principal.php">
-                <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top ">
-                Veterinaria RM
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse show" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="principal.php">Inicio</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active fw-bold rounded shadow" href="mascota.php" style="background-color: #CDEBFC;">Mascotas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cliente.php">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultas.php">Consultas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="roles.php">Roles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="usuarios.php">Usuarios</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Salir</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
 
     <div class="container w-75 mt-5 rounded shadow" style="background-color: #EFF5F8;">
         <h5 class="fw-bold text-align-top text-center pt-2">REGISTRO MASCOTA</h5>
@@ -67,7 +26,7 @@
 
 
 
-        <form action="resultadoMas.php" method="post" class="row g-3">
+        <form action="insert_mascotas.php" method="post" id="form_mascotas" class="row g-3">
             <div class="col-md-6">
                 <label for="nombreM" class="form-label fw-bold">Nombre:</label>
                 <input type="text" class="form-control" id="nombreM" name="nombreM" required>
@@ -117,7 +76,7 @@
 
                     // Definir la información de la conexión
                     $host = 'localhost';
-                    $dbname = 'veterinaria';
+                    $dbname = 'veterinariarm';
                     $user = 'root';
                     $password = '';
 

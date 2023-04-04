@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="648a89cc-d898-4aba-a39d-92aedff5ee90" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ajax/cargar_clientes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/cargar_consultas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/cargar_mascota.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/cargar_roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/cargar_usuarios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/eliminar_clientes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/eliminar_consultas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/eliminar_mascotas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/eliminar_roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/eliminar_usuarios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/obtener_clientes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/obtener_consultas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/obtener_mascota.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/obtener_roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/obtener_usuarios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert_clientes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert_consultas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert_mascotas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert_roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert_usuarios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/cliente.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/consultas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/mascotas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/roles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/usuarios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modal/clientes_modal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modal/consultas_modal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modal/mascotas_modal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modal/roles_modal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modal/usuarios_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/cliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas.php" beforeDir="false" afterPath="$PROJECT_DIR$/consultas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mascota.php" beforeDir="false" afterPath="$PROJECT_DIR$/mascota.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/principal.php" beforeDir="false" afterPath="$PROJECT_DIR$/principal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultadoCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/resultadoCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultadoConsulta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resultadoConsulta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultadoMas.php" beforeDir="false" afterPath="$PROJECT_DIR$/resultadoMas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolesResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/rolesResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/userResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NbLAC8Fi31xORRXkZbZpPoBi4T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/htdocs/VeterinariaRM",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="eliminar_mascotas.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ajax/eliminar_mascotas.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.eliminar_mascotas.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="648a89cc-d898-4aba-a39d-92aedff5ee90" name="Changes" comment="" />
+      <created>1679927688563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679927688563</updated>
+      <workItem from="1679927689924" duration="13000" />
+      <workItem from="1679969667864" duration="37000" />
+      <workItem from="1680570399640" duration="18749000" />
+      <workItem from="1680619031821" duration="248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

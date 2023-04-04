@@ -2,7 +2,7 @@
 
 // Definir la información de la conexión
 $host = 'localhost';
-$dbname = 'veterinaria';
+$dbname = 'veterinariarm';
 $user = 'root';
 $password = '';
 

@@ -14,48 +14,7 @@
 
 <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ADDDFA;">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="principal.php">
-                <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top ">
-                Veterinaria RM
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>    
-        </button>
-            <div class="collapse navbar-collapse show" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active fw-bold rounded shadow" aria-current="page" href="principal.php"  style="background-color: #CDEBFC;">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mascota.php">Mascotas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cliente.php">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultas.php">Consultas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="roles.php">Roles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="usuarios.php">Usuarios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Salir</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+<?php include 'menus/menu1.php' ?>
 
 
     <div class="container w-50 formulario mt-5 rounded shadow " style="background-color: #F1FDF7;">

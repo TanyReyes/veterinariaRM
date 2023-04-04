@@ -14,48 +14,7 @@
 
 <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ADDDFA;">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="principal.php">
-                <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top ">
-                Veterinaria RM
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse show" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="principal.php">Inicio</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="mascota.php">Mascotas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold active rounded shadow" href="cliente.php"  style="background-color: #CDEBFC;">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultas.php">Consultas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="roles.php">Roles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="usuarios.php">Usuarios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Salir</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+<?php include 'menus/menu1.php' ?>
 
     <div class="container w-50 mt-5 rounded shadow" style="background-color: #EFF5F8;">
         <h5 class="fw-bold text-align-top text-center pt-2">REGISTRO CLIENTE</h5>
@@ -63,10 +22,7 @@
             <img src="img/cliente.png" alt="" width="100" height="100">
         </div>
 
-
-
-
-        <form action="resultadoCliente.php" method="post" class="row g-3">
+        <form action="insert_clientes.php" method="post" id="form_clientes" class="row g-3">
             <div class="col-md-12">
                 <label for="nombre" class="form-label fw-bold">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
