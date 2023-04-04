@@ -28,16 +28,22 @@ if ($pdo->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $nombre = $_POST['nombre'];
-    $estatus = $_POST['tipo'];
+    if (preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["nombre"]) &&
+        preg_match("/^(0|1)$/", $_POST["tipo"])) {
 
 
+        $nombre = $_POST['nombre'];
+        $estatus = $_POST['tipo'];
 
-    // Preparar la consulta SQL para insertar los datos en la tabla cliente
-    $sql = "INSERT INTO roles (nombre, estatus) VALUES ('$nombre', '$estatus')";
 
-    $consulta = "SELECT * FROM roles";
+        // Preparar la consulta SQL para insertar los datos en la tabla cliente
+        $sql = "INSERT INTO roles (nombre, estatus) VALUES ('$nombre', '$estatus')";
 
+        $consulta = "SELECT * FROM roles";
+
+    } else {
+        echo "<script>alert('Error, no se permiten caracteres especiales.'); window.history.back();</script>";
+    }
     // Ejecutar la consulta SQL
     if ($pdo->query($sql) === TRUE) {
         echo "<script>alert('Los datos se insertaron correctamente'); window.location = 'roles.php' </script>";

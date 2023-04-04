@@ -25,7 +25,7 @@ function cargarDatos(termino) {
             $.each(resultados, function (index, roles) {
                 var tr = $("<tr>");
                 tr.append("<td>" + roles.nombre + "</td>");
-                tr.append("<td>" + roles.status + "</td>");
+                tr.append("<td>" + roles.estatus + "</td>");
                 tr.append(
                     "<td><button data-bs-toggle='modal' data-bs-target='#exampleModal' class='editar-roles shadow btn btn-success rounded fw-bold' data-id='" +
                     roles.id_rol +
@@ -48,8 +48,8 @@ function cargarDatos(termino) {
                     dataType: "json",
                     success: function (roles) {
                         // Llenar los campos del formulario con los datos del cliente para editar
-                        $("#nomRol").val(roles.nomRol);
-                        $("#estatus").val(roles.estatus);
+                        $("#nombre").val(roles.nombre);
+                        $("#tipo").val(roles.tipo);
 
                         // Cambiar el texto del botón de submit para indicar que se está editando
                         $("button[type='submit']").text("Editar");

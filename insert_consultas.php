@@ -28,6 +28,12 @@ if ($pdo->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    if (preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["exa"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["diag"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["medi"]) &&
+        preg_match("/[\d{2})\/(\d{2})\/(\d{4}]+$/", $_POST["cita"]) &&
+        preg_match("/^[\d{1,3}(\.\d{1,2})?]+$/", $_POST["costo"])) {
+
     $mascota = $_POST['masco'];
     $cliente = $_POST['cli'];
     $examen = $_POST['exa'];
@@ -37,21 +43,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $total = $_POST['costo'];
 
 
-
     // Preparar la consulta SQL para insertar los datos en la tabla cliente
     $sql = "INSERT INTO consultas (id_mascota, id_cliente, examen_fisico, diagnostico, medicamentos, proxima_cita, costo) 
         VALUES ('$mascota', '$cliente','$examen', '$diagnos', '$medica','$cita','$total')";
 
     $consulta = "SELECT * FROM consultas";
 
-    // Ejecutar la consulta SQL
-    if ($pdo->query($sql) === TRUE) {
-        echo "<script>alert(Los datos se insertaron correctamente.)</script>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $pdo->error;
-    }
+} else {
+    echo "<script>alert('Error, no se permiten caracteres especiales.'); window.history.back();</script>";
+}
+// Ejecutar la consulta SQL
+if ($pdo->query($sql) === TRUE) {
+    echo "<script>alert('Los datos se insertaron correctamente'); window.location = 'consultas.php';</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $pdo->error;
+}
 
-    // Cerrar la conexión a la base de datos
-    $pdo->close();
+// Cerrar la conexión a la base de datos
+$pdo->close();
 }
 ?>

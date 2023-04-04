@@ -28,6 +28,14 @@ if ($pdo->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    if (preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["nombre"]) &&
+        preg_match("/^[0-9]{8}$/", $_POST["tel"]) &&
+        preg_match("/^\d{8}-\d+$/", $_POST["dui"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s, ]+$/", $_POST["direccion"]) &&
+        preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}+$/", $_POST["email"]) &&
+        preg_match("/^[01]+$/", $_POST["tipo"])) {
+
+
     $nombre = $_POST['nombre'];
     $telefono = $_POST['tel'];
     $dui = $_POST['dui'];
@@ -36,12 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $estatus = $_POST['tipo'];
 
 
-
     // Preparar la consulta SQL para insertar los datos en la tabla cliente
     $sql = "INSERT INTO cliente (nombre, telefono, dui, direccion, email, estatus) VALUES ('$nombre', '$telefono', '$dui', '$direccion', '$email', '$estatus')";
 
     $consulta = "SELECT * FROM cliente";
-
+} else {
+    echo "<script>alert('Error, no se permiten caracteres especiales.'); window.history.back();</script>";
+}
     // Ejecutar la consulta SQL
     if ($pdo->query($sql) === TRUE) {
         echo "<script>alert('Los datos se insertaron correctamente'); window.location = 'cliente.php'; </script>";

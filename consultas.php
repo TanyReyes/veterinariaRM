@@ -23,7 +23,7 @@
             <img src="img/medicamentos.png" alt="" width="125" height="125">
         </div>
 
-        <form action="resultadoConsulta.php" method="post" id="form_consulta" class="row g-3">
+        <form action="insert_consultas.php" method="post" id="form_consultas" class="row g-3">
             <div class="col-md-6">
                 <label for="masco" class="form-label fw-bold">Seleccione mascota:</label>
                 <select id="masco" class="form-select" name="masco" required>

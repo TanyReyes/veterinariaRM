@@ -28,22 +28,32 @@ if ($pdo->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $nombreM = $_POST['nombreM'];
-    $raza = $_POST['raza'];
-    $color = $_POST['color'];
-    $peso = $_POST['peso'];
-    $altura = $_POST['altura'];
-    $sexo = $_POST['sexo'];
-    $fechaN = $_POST['nacimiento'];
-    $cliente = $_POST['client'];
+    if (preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/", $_POST["nombreM"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/", $_POST["raza"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["color"]) &&
+        preg_match("/[\d{2})\/(\d{2})\/(\d{4}]+$/", $_POST["nacimiento"]) &&
+        preg_match("/^[\d{1,3}(\.\d{1,2})?]+$/", $_POST["peso"]) &&
+        preg_match("/^[\d{1,3}(\.\d{1,2})?]+$/", $_POST["altura"]) &&
+        preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/", $_POST["sexo"])) {
 
+        $nombreM = $_POST['nombreM'];
+        $raza = $_POST['raza'];
+        $color = $_POST['color'];
+        $peso = $_POST['peso'];
+        $altura = $_POST['altura'];
+        $sexo = $_POST['sexo'];
+        $fechaN = $_POST['nacimiento'];
+        $cliente = $_POST['client'];
 
-
-    // Preparar la consulta SQL para insertar los datos en la tabla cliente
-    $sql = "INSERT INTO mascotas (nombre, raza, color, peso, altura, sexo, fecha_nacimiento, id_cliente) 
+        // Preparar la consulta SQL para insertar los datos en la tabla cliente
+        $sql = "INSERT INTO mascotas (nombre, raza, color, peso, altura, sexo, fecha_nacimiento, id_cliente) 
         VALUES ('$nombreM', '$raza','$color', '$peso', '$altura','$sexo','$fechaN','$cliente')";
 
-    $consulta = "SELECT * FROM mascotas";
+        $consulta = "SELECT * FROM mascotas";
+
+    } else {
+        echo "<script>alert('Error, no se permiten caracteres especiales.'); window.history.back();</script>";
+    }
 
     // Ejecutar la consulta SQL
     if ($pdo->query($sql) === TRUE) {

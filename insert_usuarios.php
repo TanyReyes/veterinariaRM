@@ -14,7 +14,7 @@ try {
 
 // Datos de conexión a la base de datos
 $host = 'localhost';
-$dbname = 'veterinaria';
+$dbname = 'veterinariarm';
 $user = 'root';
 $password = '';
 
@@ -28,22 +28,30 @@ if ($pdo->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $usuario = $_POST['user'];
-    $password = $_POST['pass'];
-    $email = $_POST['email'];
-    $telefono = $_POST['tel'];
-    $status = $_POST['tipo'];
-    $roles = $_POST['rol'];
+    if (preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $_POST["user"]) &&
+        preg_match("/^[0-9a-zA-Z]+$/", $_POST["pass"]) &&
+        preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}+$/", $_POST["email"]) &&
+        preg_match("/^[0-9]{8}$/", $_POST["tel"]) &&
+        preg_match("/^[10]+$/", $_POST["tipo"])
+    ) {
+
+        $usuario = $_POST['user'];
+        $password = $_POST['pass'];
+        $email = $_POST['email'];
+        $telefono = $_POST['tel'];
+        $status = $_POST['tipo'];
+        $roles = $_POST['rol'];
 
 
-
-    // Preparar la consulta SQL para insertar los datos en la tabla cliente
-    $sql = "INSERT INTO usuario (usuario, password, email, telefono, status, id_roles)
+        // Preparar la consulta SQL para insertar los datos en la tabla cliente
+        $sql = "INSERT INTO usuario (usuario, password, email, telefono, status, id_roles)
         VALUES ('$usuario', '$password', '$email', '$telefono', '$status', '$roles')";
 
 
-    $consulta = "SELECT * FROM usuario";
-
+        $consulta = "SELECT * FROM usuario";
+    } else {
+        echo "<script>alert('Error, no se permiten caracteres especiales.'); window.history.back();</script>";
+    }
 
 
     // Ejecutar la consulta SQL
